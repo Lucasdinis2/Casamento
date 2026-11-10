@@ -24,7 +24,7 @@
   </symbol>
 </svg>
 
-<!-- ABERTURA: o convite (sem alterações) -->
+<!-- ABERTURA: o convite -->
 <div class="opening" id="opening">
   <div class="opening-inner">
     <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Abrir o convite">
@@ -75,11 +75,12 @@
       <small class="w-sub">sábado · 2027</small>
     </div>
     <p class="place rv">Juiz de Fora · Minas Gerais</p>
+    <p class="small rv">cerimônia 16h · recepção 18h</p>
     <div class="rv"><button class="btn" type="button" data-cal>salvar na agenda</button></div>
   </div>
 </section>
 
-<!-- PARTE 3 · interagir: localização, PIX e presença (fundo branco, letras pretas) -->
+<!-- PARTE 3 · interagir: localização, presentes e presença (fundo branco, letras pretas) -->
 <section class="part part-3" id="interagir">
   <div class="p3-in">
     <p class="small rv">clique nos ícones para</p>
@@ -90,26 +91,24 @@
         <span class="ico" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.5-6.1-6.5-11.2a6.5 6.5 0 0 1 13 0C18.5 14.9 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.3"/></svg>
         </span>
-        <div class="item">
-          <button class="pill" type="button" aria-expanded="false" aria-controls="pn-local">
-            <strong>localização</strong><small>cerimônia &amp; recepção</small>
-          </button>
-          <div class="panel" id="pn-local" hidden>
-            <div class="panel-in">
-              <div class="loc">
-                <span class="tag">cerimônia · 16h</span>
-                <h3>Paróquia São Geraldo</h3>
-                <p>Teixeiras · Juiz de Fora, MG</p>
-                <a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x989b0fb05db0dd:0xffbd390526fd70fc?entry=s&amp;sa=X&amp;ved=2ahUKEwjVhPfZ4_uXAxX5qpUCHYcvPCEQ4kB6BAgEEAA&amp;hl=pt" target="_blank" rel="noopener">abrir no mapa</a>
-              </div>
-              <div class="loc">
-                <span class="tag">recepção</span>
-                <h3>Gran Jardim</h3>
-                <p>Salvaterra · Juiz de Fora, MG</p>
-                <a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x988f1b3ba55743:0xb5db52e57cb85497?entry=s&amp;sa=X&amp;ved=2ahUKEwju99Pp4_uXAxUmuJUCHedyJM0Q4kB6BAgWEAA&amp;hl=pt" target="_blank" rel="noopener">abrir no mapa</a>
-              </div>
-              <p class="note-s">Traje: social ou esporte fino.</p>
+        <button class="pill" type="button" aria-expanded="false" aria-controls="pn-local">
+          <strong>localização</strong><small>cerimônia &amp; recepção</small>
+        </button>
+        <div class="panel" id="pn-local" hidden>
+          <div class="panel-in">
+            <div class="loc">
+              <span class="tag">cerimônia · 16h</span>
+              <h3>Paróquia São Geraldo</h3>
+              <p>Teixeiras · Juiz de Fora, MG</p>
+              <a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x989b0fb05db0dd:0xffbd390526fd70fc?entry=s&amp;sa=X&amp;ved=2ahUKEwjVhPfZ4_uXAxX5qpUCHYcvPCEQ4kB6BAgEEAA&amp;hl=pt" target="_blank" rel="noopener">abrir no mapa</a>
             </div>
+            <div class="loc">
+              <span class="tag">recepção · 18h</span>
+              <h3>Gran Jardim</h3>
+              <p>Salvaterra · Juiz de Fora, MG</p>
+              <a href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x988f1b3ba55743:0xb5db52e57cb85497?entry=s&amp;sa=X&amp;ved=2ahUKEwju99Pp4_uXAxUmuJUCHedyJM0Q4kB6BAgWEAA&amp;hl=pt" target="_blank" rel="noopener">abrir no mapa</a>
+            </div>
+            <p class="note-s">Traje: social ou esporte fino.</p>
           </div>
         </div>
       </li>
@@ -118,19 +117,20 @@
         <span class="ico" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="11" rx="1"/><path d="M3 9h18v-3H3z"/><path d="M12 6v14"/><path d="M12 6c-1.6-3-5-3-5-.9 0 1.6 2.4 1.7 5 .9zM12 6c1.6-3 5-3 5-.9 0 1.6-2.4 1.7-5 .9z"/></svg>
         </span>
-        <div class="item">
-          <button class="pill" type="button" aria-expanded="false" aria-controls="pn-pix">
-            <strong>lista de presentes</strong><small>contribuir por PIX</small>
-          </button>
-          <div class="panel" id="pn-pix" hidden>
-            <div class="panel-in">
-              <p>Cada cota é uma contribuição em PIX para o casal, no valor que você escolher. Não é uma compra em loja.</p>
-              <ul class="cotas" id="cotas"></ul>
-              <p class="small">chave pix</p>
-              <code id="pixKey"></code>
-              <button class="btn solid" type="button" id="pixCopy">copiar chave</button>
-              <p class="status" id="pixStatus" aria-live="polite"></p>
+        <button class="pill" type="button" aria-expanded="false" aria-controls="pn-presentes">
+          <strong>lista de presentes</strong><small>presenteie por PIX</small>
+        </button>
+        <div class="panel" id="pn-presentes" hidden>
+          <div class="panel-in">
+            <p>Escolha um presente e envie o valor por PIX direto para os noivos. Não é uma compra em loja: o valor vai para a nossa conta e a gente usa para montar a casa e viver a lua de mel.</p>
+            <div class="chips" role="group" aria-label="Filtrar presentes">
+              <button type="button" class="chip" aria-pressed="true" data-cat="todos">todos</button>
+              <button type="button" class="chip" aria-pressed="false" data-cat="cozinha">cozinha</button>
+              <button type="button" class="chip" aria-pressed="false" data-cat="casa">casa</button>
+              <button type="button" class="chip" aria-pressed="false" data-cat="lua-de-mel">lua de mel</button>
+              <button type="button" class="chip" aria-pressed="false" data-cat="divertidos">divertidos</button>
             </div>
+            <ul class="gifts" id="gifts"></ul>
           </div>
         </div>
       </li>
@@ -139,15 +139,60 @@
         <span class="ico" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M8 12.3l2.7 2.7L16.3 9.5"/></svg>
         </span>
-        <div class="item">
-          <button class="pill" type="button" aria-expanded="false" aria-controls="pn-rsvp">
-            <strong>confirme sua presença</strong>
-          </button>
-          <div class="panel" id="pn-rsvp" hidden>
-            <div class="panel-in">
-              <p>Confirme sua presença para que possamos preparar tudo com carinho.</p>
-              <button class="btn solid" type="button" id="rsvpBtn">confirmar presença</button>
+        <button class="pill" type="button" aria-expanded="false" aria-controls="pn-rsvp">
+          <strong>confirme sua presença</strong>
+        </button>
+        <div class="panel" id="pn-rsvp" hidden>
+          <div class="panel-in">
+            <p>Confirme sua presença para que possamos preparar tudo com carinho.</p>
+            <p class="rsvp-prazo" id="rsvpPrazo" hidden></p>
+
+            <!-- Formulário: as respostas vão para a planilha do Google (veja apps-script/confirmacoes.gs) -->
+            <form class="rsvp" id="rsvpForm" novalidate>
+              <p class="rsvp-convite" id="rsvpConvite" hidden></p>
+              <label class="field">
+                <span>Seu nome completo</span>
+                <input name="nome" autocomplete="name" maxlength="120" required>
+              </label>
+              <div class="field">
+                <span id="vaiLbl">Você vai?</span>
+                <div class="choice" role="radiogroup" aria-labelledby="vaiLbl">
+                  <label><input type="radio" name="vai" value="sim"><span>Sim, eu vou!</span></label>
+                  <label><input type="radio" name="vai" value="nao"><span>Não poderei ir</span></label>
+                </div>
+              </div>
+              <div class="if-sim" id="ifSim" hidden>
+                <label class="field">
+                  <span>Quantas pessoas, contando você?</span>
+                  <select name="pessoas" id="rsvpPessoas"></select>
+                </label>
+                <label class="field" id="ifMais" hidden>
+                  <span>Nomes dos acompanhantes</span>
+                  <textarea name="acompanhantes" rows="2" maxlength="500"></textarea>
+                </label>
+                <label class="field">
+                  <span>Restrição alimentar <i>(opcional)</i></span>
+                  <input name="restricao" maxlength="300">
+                </label>
+              </div>
+              <label class="field">
+                <span>WhatsApp <i>(opcional)</i></span>
+                <input name="telefone" type="tel" inputmode="tel" autocomplete="tel" maxlength="40">
+              </label>
+              <label class="field">
+                <span>Recado para os noivos <i>(opcional)</i></span>
+                <textarea name="recado" rows="3" maxlength="1000"></textarea>
+              </label>
+              <!-- Campo escondido: só robôs preenchem -->
+              <label class="hp" aria-hidden="true">Site <input name="site" tabindex="-1" autocomplete="off"></label>
+              <button class="btn solid" type="submit" id="rsvpSend">enviar resposta</button>
               <p class="status" id="rsvpMsg" aria-live="polite"></p>
+            </form>
+
+            <div class="rsvp-ok" id="rsvpOk" hidden>
+              <p class="ok-title">obrigado!</p>
+              <p id="rsvpOkMsg"></p>
+              <button type="button" class="link" id="rsvpAgain">enviar outra resposta</button>
             </div>
           </div>
         </div>
@@ -159,6 +204,28 @@
 </main>
 
 <footer class="sign">Isadora Diniz &amp; Natan Delgado · 2027</footer>
+
+<!-- Janela de presente: PIX copia e cola com o valor do item -->
+<dialog class="pay" id="pay" aria-labelledby="payTitle">
+  <form method="dialog" class="pay-in">
+    <button class="pay-x" value="fechar" aria-label="Fechar">&times;</button>
+    <span class="pay-ico" id="payIco" aria-hidden="true"></span>
+    <p class="small">presentear com pix</p>
+    <h3 id="payTitle"></h3>
+    <p class="pay-val" id="payVal"></p>
+    <p class="pay-note">O valor vai por PIX direto para os noivos. Não é uma compra em loja.</p>
+    <ol class="pay-steps">
+      <li>Toque em <b>copiar código PIX</b>.</li>
+      <li>No app do seu banco, escolha <b>PIX copia e cola</b>.</li>
+      <li id="payStep3">Confira o valor e confirme.</li>
+    </ol>
+    <button type="button" class="btn solid" id="payCopy">copiar código pix</button>
+    <textarea id="payCode" rows="4" readonly hidden aria-label="Código PIX copia e cola"></textarea>
+    <p class="pay-alt">ou use a chave <code id="payKey"></code> · <button type="button" class="link" id="payKeyCopy">copiar chave</button></p>
+    <p class="status" id="payStatus" aria-live="polite"></p>
+  </form>
+</dialog>
+
 <div class="progress" id="progress" aria-hidden="true"></div>
 <script src="script.js"></script>
 </body>
