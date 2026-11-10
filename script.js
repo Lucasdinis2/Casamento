@@ -97,7 +97,7 @@
     `DTSTAMP:${icsStamp()}`,
     "DTSTART:20270410T190000Z", // 16h em Brasília (UTC-3)
     "DTEND:20270411T010000Z",   // até 22h em Brasília (ajuste se necessário)
-    `SUMMARY:${icsEscape("Casamento de Natan e Isadora")}`,
+    `SUMMARY:${icsEscape("Casamento de Isadora Diniz e Natan Delgado")}`,
     `LOCATION:${icsEscape("Paróquia São Geraldo, Teixeiras, Juiz de Fora - MG")}`,
     `DESCRIPTION:${icsEscape("Cerimônia às 16h na Paróquia São Geraldo. Recepção no Gran Jardim, Salvaterra.")}`,
     "END:VEVENT",
