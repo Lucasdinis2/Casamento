@@ -16,23 +16,23 @@
     // valor: em reais (null = valor livre) · cat: cozinha, casa, lua-de-mel, divertidos ou livre
     // icone: um dos nomes de ICONES, logo abaixo
     presentes: [
-      { nome: "Air fryer", texto: "batata frita sem culpa", valor: 450, cat: "cozinha", icone: "airfryer" },
-      { nome: "Cafeteira expresso", texto: "o primeiro café da casa nova", valor: 650, cat: "cozinha", icone: "cafe" },
-      { nome: "Jogo de panelas", texto: "para os jantares a dois", valor: 600, cat: "cozinha", icone: "panela" },
-      { nome: "Batedeira planetária", texto: "bolo de domingo garantido", valor: 550, cat: "cozinha", icone: "batedeira" },
-      { nome: "Liquidificador", texto: "sucos, vitaminas e caipirinhas", valor: 250, cat: "cozinha", icone: "liquidificador" },
-      { nome: "Micro-ondas", texto: "para esquentar a marmita", valor: 700, cat: "cozinha", icone: "microondas" },
-      { nome: "Aparelho de jantar", texto: "para receber os amigos", valor: 450, cat: "cozinha", icone: "prato" },
-      { nome: "Aspirador robô", texto: "ele limpa, a gente descansa", valor: 1300, cat: "casa", icone: "robo" },
-      { nome: "Jogo de cama", texto: "noites bem dormidas", valor: 350, cat: "casa", icone: "cama" },
-      { nome: "Kit de toalhas", texto: "macias e felpudas", valor: 220, cat: "casa", icone: "toalha" },
-      { nome: "Jogo de taças", texto: "para brindar a vida a dois", valor: 200, cat: "casa", icone: "tacas" },
-      { nome: "Passagem da lua de mel", texto: "um pedacinho da viagem", valor: 500, cat: "lua-de-mel", icone: "aviao" },
-      { nome: "Jantar romântico", texto: "uma noite especial na viagem", valor: 300, cat: "lua-de-mel", icone: "jantar" },
-      { nome: "Drinks ao pôr do sol", texto: "um brinde na beira do mar", valor: 150, cat: "lua-de-mel", icone: "tacas" },
-      { nome: "Primeira pizza da casa", texto: "a gente promete dividir", valor: 120, cat: "divertidos", icone: "pizza" },
-      { nome: "Um ano de streaming", texto: "maratonas a dois", valor: 300, cat: "divertidos", icone: "tv" },
-      { nome: "Kit pós-festa", texto: "água de coco, café e descanso", valor: 90, cat: "divertidos", icone: "cafe" },
+      { nome: "Air fryer", texto: "batata frita sem culpa", valor: 250, cat: "cozinha", icone: "airfryer" },
+      { nome: "Cafeteira expresso", texto: "o primeiro café da casa nova", valor: 300, cat: "cozinha", icone: "cafe" },
+      { nome: "Jogo de panelas", texto: "para os jantares a dois", valor: 280, cat: "cozinha", icone: "panela" },
+      { nome: "Batedeira planetária", texto: "bolo de domingo garantido", valor: 260, cat: "cozinha", icone: "batedeira" },
+      { nome: "Liquidificador", texto: "sucos, vitaminas e caipirinhas", valor: 130, cat: "cozinha", icone: "liquidificador" },
+      { nome: "Micro-ondas", texto: "para esquentar a marmita", valor: 350, cat: "cozinha", icone: "microondas" },
+      { nome: "Aparelho de jantar", texto: "para receber os amigos", valor: 200, cat: "cozinha", icone: "prato" },
+      { nome: "Aspirador robô", texto: "ele limpa, a gente descansa", valor: 500, cat: "casa", icone: "robo" },
+      { nome: "Jogo de cama", texto: "noites bem dormidas", valor: 180, cat: "casa", icone: "cama" },
+      { nome: "Kit de toalhas", texto: "macias e felpudas", valor: 120, cat: "casa", icone: "toalha" },
+      { nome: "Jogo de taças", texto: "para brindar a vida a dois", valor: 100, cat: "casa", icone: "tacas" },
+      { nome: "Passagem da lua de mel", texto: "um pedacinho da viagem", valor: 250, cat: "lua-de-mel", icone: "aviao" },
+      { nome: "Jantar romântico", texto: "uma noite especial na viagem", valor: 150, cat: "lua-de-mel", icone: "jantar" },
+      { nome: "Drinks ao pôr do sol", texto: "um brinde na beira do mar", valor: 80, cat: "lua-de-mel", icone: "tacas" },
+      { nome: "Primeira pizza da casa", texto: "a gente promete dividir", valor: 60, cat: "divertidos", icone: "pizza" },
+      { nome: "Um ano de streaming", texto: "maratonas a dois", valor: 150, cat: "divertidos", icone: "tv" },
+      { nome: "Kit pós-festa", texto: "água de coco, café e descanso", valor: 50, cat: "divertidos", icone: "cafe" },
       { nome: "Contribuição livre", texto: "o valor que você quiser", valor: null, cat: "livre", icone: "presente" },
     ],
   };
@@ -94,11 +94,12 @@
     if (opening.classList.contains("is-open")) return;
     opening.classList.add("is-open");
     sparkle();
-    document.body.classList.add("ready");
+    // O cartão "você está convidado" fica uns 2 segundos na tela antes de a capa aparecer
     setTimeout(() => {
+      document.body.classList.add("ready");
       document.body.classList.remove("locked");
       opening.classList.add("gone");
-    }, reduce ? 0 : 1700);
+    }, reduce ? 0 : 3800);
   };
   envelope.addEventListener("click", openInvite);
   envelope.addEventListener("keydown", (e) => {
@@ -308,7 +309,7 @@
   const params = new URLSearchParams(location.search);
   const convite = (params.get("convite") || "").trim().slice(0, 60);
   const lugaresParam = parseInt(params.get("lugares"), 10);
-  const lugares = Math.min(10, Math.max(1, lugaresParam || 6));
+  const lugares = Math.min(3, Math.max(1, lugaresParam || 3));
 
   for (let n = 1; n <= lugares; n++) {
     const opt = document.createElement("option");
